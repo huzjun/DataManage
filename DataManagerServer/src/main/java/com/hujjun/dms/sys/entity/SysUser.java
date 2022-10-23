@@ -1,25 +1,19 @@
-package com.hujjun.dms.entity;
+package com.hujjun.dms.sys.entity;
 
-import com.baomidou.mybatisplus.annotation.IdType;
 import com.baomidou.mybatisplus.annotation.TableField;
-import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableName;
-import java.io.Serializable;
+
 import java.util.Date;
+import java.util.List;
+
 import lombok.Data;
 
 /**
- * 
  * @AUTHOR hujjun
  */
-@TableName(value ="sys_user")
+@TableName(value = "sys_user")
 @Data
-public class SysUser implements Serializable {
-    /**
-     * 用户ID
-     */
-    @TableId(value = "id", type = IdType.AUTO)
-    private Long id;
+public class SysUser extends BaseEntity {
 
     /**
      * 用户名
@@ -64,23 +58,27 @@ public class SysUser implements Serializable {
     private String status;
 
     /**
-     * 创建时间
+     * 所属角色 多个角色 逗号隔开
      */
-    @TableField(value = "create_time")
-    private Date createTime;
-
-    /**
-     * 更新时间
-     */
-    @TableField(value = "update_time")
-    private Date updateTime;
-
-    /**
-     * 备注
-     */
-    @TableField(value = "remark")
-    private String remark;
-
     @TableField(exist = false)
-    private static final long serialVersionUID = 1L;
+    private String roles;
+
+    /**
+     * 旧密码
+     */
+    @TableField(exist = false)
+    private String oldPassword;
+
+    /**
+     * 确认新密码
+     */
+    @TableField(exist = false)
+    private String newPassword;
+
+    /**
+     * 所有角色集合
+     */
+    @TableField(exist = false)
+    public List<SysRole> sysRoleList;
+
 }

@@ -1,0 +1,38 @@
+package com.hujjun.dms.sys.entity;
+
+import com.baomidou.mybatisplus.annotation.IdType;
+import com.baomidou.mybatisplus.annotation.TableField;
+import com.baomidou.mybatisplus.annotation.TableId;
+import com.baomidou.mybatisplus.annotation.TableName;
+
+import java.io.Serializable;
+
+import lombok.Data;
+
+/**
+ * @AUTHOR hujjun
+ */
+@TableName(value = "sys_role_menu")
+@Data
+public class SysRoleMenu implements Serializable {
+    @TableField(exist = false)
+    private static final long serialVersionUID = 1L;
+    /**
+     * 角色菜单主键ID
+     */
+    @TableId(value = "id", type = IdType.AUTO)
+    private Long id;
+
+    /**
+     * 角色ID
+     */
+    @TableField(value = "role_id")
+    private Long roleId;
+
+    /**
+     * 菜单ID
+     */
+    @TableField(value = "menu_id")
+    private Long menuId;
+
+}

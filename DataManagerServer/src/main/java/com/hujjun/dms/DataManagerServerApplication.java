@@ -8,7 +8,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
  * @AUTHOR hujjun
  */
 @SpringBootApplication
-@MapperScan("com.hujjun.dms.mapper")
+@MapperScan("com.hujjun.dms.*.mapper")
 public class DataManagerServerApplication {
 
     public static void main(String[] args) {
