@@ -4,6 +4,7 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/DataManage.iml" filepath="$PROJECT_DIR$/.idea/DataManage.iml" />
       <module fileurl="file://$PROJECT_DIR$/DataManageServer/DataManageServer.iml" filepath="$PROJECT_DIR$/DataManageServer/DataManageServer.iml" />
+      <module fileurl="file://$PROJECT_DIR$/DataManagerServer/DataManagerServer.iml" filepath="$PROJECT_DIR$/DataManagerServer/DataManagerServer.iml" />
     </modules>
   </component>
 </project>

@@ -1,6 +1,5 @@
-package com.hujjun.jwtshiro.shiro;
+package com.hujjun.datamanageserver.shiro;
 
-import org.apache.shiro.authc.AuthenticationToken;
 import org.apache.shiro.authc.UsernamePasswordToken;
 
 import java.util.UUID;
